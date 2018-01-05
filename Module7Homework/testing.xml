@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Selenium Actions and Grid" thread_count="3">
+  <test name="GRID TEST FOR IE">
+        <parameter name ="browserType" value="IE"/>
+        <classes>
+            <class name ="ActionsTest"/>
+        </classes>
+    </test>
+    <test name="GRID TEST FOR FIREFOX">
+        <parameter name ="browserType" value="firefox"/>
+        <classes>
+            <class name ="ActionsTest"/>
+        </classes>
+    </test>
+  <test name="GRID TEST FOR CHROME">
+        <parameter name ="browserType" value="chrome"/>
+        <classes>
+            <class name ="ActionsTest"/>
+        </classes>
+    </test>
+</suite>
