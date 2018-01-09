@@ -87,7 +87,7 @@ public class ActionsTest {
     public void takeScreenshot() {
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(scrFile, new File("C:\\Users\\Lusine_Hakobyan\\Desktop\\screenshot.png"));
+            FileUtils.copyFile(scrFile, new File("screenshot.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
