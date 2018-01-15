@@ -1,4 +1,4 @@
-package PageObjects;
+package pageobjects;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends HomePage{
+public class LoginPage extends pageobjects.HomePage {
 
     public LoginPage(WebDriver driver) {
         super(driver);

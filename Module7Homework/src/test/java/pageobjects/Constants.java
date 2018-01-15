@@ -1,4 +1,4 @@
-package PageObjects;
+package pageobjects;
 
 public class Constants {
 

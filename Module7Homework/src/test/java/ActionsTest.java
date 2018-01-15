@@ -1,6 +1,6 @@
-import PageObjects.Constants;
-import PageObjects.LoginPage;
-import PageObjects.YandexDiskPage;
+import pageobjects.Constants;
+import pageobjects.LoginPage;
+import pageobjects.YandexDiskPage;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
@@ -18,7 +18,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static PageObjects.Constants.URL;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class ActionsTest {
@@ -49,14 +48,14 @@ public class ActionsTest {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        driver.get(URL);
+        driver.get(Constants.URL);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, SECONDS);
     }
 
     @Test
     public void signIn() {
-        boolean isPageOpened = new LoginPage(driver).signInAccount(Constants.USERNAME, Constants.PASSWORD).isPageOpened();
+        boolean isPageOpened = new LoginPage(driver).signInAccount(pageobjects.Constants.USERNAME, Constants.PASSWORD).isPageOpened();
         Assert.assertTrue(isPageOpened, "The page is not opened");
     }
     @Test(dependsOnMethods = "signIn")
